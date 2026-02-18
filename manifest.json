@@ -1,0 +1,9 @@
+{
+  "name": "FPAS PRO",
+  "short_name": "FPAS",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#4e73df",
+  "theme_color": "#4e73df",
+  "icons": []
+}
