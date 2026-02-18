@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FPAS PRO v9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="center-card">
+    <h2>FPAS PRO</h2>
+
+    <label>User</label>
+    <select id="username"></select>
+
+    <label>Password</label>
+    <div class="password-box">
+        <input type="password" id="password">
+        <span onclick="togglePassword()">👁</span>
+    </div>
+
+    <div id="captchaQuestion"></div>
+    <input type="number" id="captchaAnswer" placeholder="Answer">
+
+    <button onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboardPage" class="hidden">
+
+<header>
+    <h3>FPAS PRO</h3>
+    <div>
+        <span id="welcomeUser"></span>
+        <button onclick="toggleTheme()">🎨</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('timetable')">Timetable</button>
+    <button onclick="showTab('analytics')">Analytics</button>
+    <button onclick="showTab('settings')">Settings</button>
+</nav>
+
+<section id="home" class="tab"></section>
+<section id="timetable" class="tab hidden"></section>
+<section id="analytics" class="tab hidden"></section>
+<section id="settings" class="tab hidden"></section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
